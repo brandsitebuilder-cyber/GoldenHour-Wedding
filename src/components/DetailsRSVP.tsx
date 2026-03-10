@@ -92,8 +92,8 @@ export default function DetailsRSVP() {
                   </div>
                   
                   <div className="relative">
-                    <select id="attending" required className="peer w-full border-b border-brand-text/20 bg-transparent py-3 focus:outline-none focus:border-brand-accent transition-colors font-light text-brand-text appearance-none">
-                      <option value="" disabled selected hidden></option>
+                    <select id="attending" required defaultValue="" className="peer w-full border-b border-brand-text/20 bg-transparent py-3 focus:outline-none focus:border-brand-accent transition-colors font-light text-brand-text appearance-none">
+                      <option value="" disabled hidden></option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="0">Regrets / Kan nie bywoon nie</option>
