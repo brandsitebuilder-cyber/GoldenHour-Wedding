@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Pinyon+Script&family=Cinzel:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -6,8 +6,9 @@
   --color-brand-text: #0D0D0D;
   --color-brand-accent: #B89A0C;
   --color-brand-fill: #FAF7F2;
-  --font-serif: "Playfair Display", serif;
+  --font-serif: "Cinzel", serif;
   --font-sans: "Montserrat", sans-serif;
+  --font-script: "Pinyon Script", cursive;
 }
 
 body {

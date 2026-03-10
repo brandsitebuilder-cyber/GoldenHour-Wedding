@@ -9,16 +9,16 @@ export default function Hero() {
   const t = content[language].hero;
 
   return (
-    <section id="landing" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="landing" className="relative h-screen flex items-end pb-24 md:items-center md:pb-0 justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
           src={images.hero} 
           alt="Ané & Lourens" 
-          className="w-full h-full object-cover"
-          style={{ objectPosition: 'center 40%' }}
+          className="w-full h-full object-cover object-[center_30%] md:object-[center_40%]"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/60 to-transparent md:hidden" />
       </div>
       
       <motion.div 

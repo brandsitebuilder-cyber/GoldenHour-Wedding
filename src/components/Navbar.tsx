@@ -37,16 +37,25 @@ export default function Navbar() {
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className="text-sm uppercase tracking-widest hover:text-brand-accent transition-colors">
+              <a key={link.name} href={link.href} className="text-xs uppercase tracking-[0.2em] hover:text-brand-accent transition-colors">
                 {link.name}
               </a>
             ))}
-            <div className="flex items-center space-x-2 text-sm uppercase tracking-widest border-l border-brand-text/20 pl-6">
-              <button onClick={() => setLanguage('en')} className={`${language === 'en' ? 'text-brand-accent font-medium' : 'text-brand-text/60 hover:text-brand-text'}`}>EN</button>
-              <span>|</span>
-              <button onClick={() => setLanguage('af')} className={`${language === 'af' ? 'text-brand-accent font-medium' : 'text-brand-text/60 hover:text-brand-text'}`}>AF</button>
+            <div className="flex items-center space-x-3 text-xs uppercase tracking-[0.2em] pl-6">
+              <button 
+                onClick={() => setLanguage('en')} 
+                className={`transition-colors ${language === 'en' ? 'text-brand-text border-b border-brand-accent' : 'text-brand-text/40 hover:text-brand-text'}`}
+              >
+                EN
+              </button>
+              <button 
+                onClick={() => setLanguage('af')} 
+                className={`transition-colors ${language === 'af' ? 'text-brand-text border-b border-brand-accent' : 'text-brand-text/40 hover:text-brand-text'}`}
+              >
+                AF
+              </button>
             </div>
           </div>
 
@@ -61,20 +70,30 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-brand-bg absolute top-full left-0 w-full shadow-md py-4 px-4 flex flex-col space-y-4">
+        <div className="md:hidden bg-brand-bg absolute top-full left-0 w-full shadow-md py-8 px-6 flex flex-col space-y-6">
           {navLinks.map((link) => (
             <a 
               key={link.name} 
               href={link.href} 
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-sm uppercase tracking-widest hover:text-brand-accent transition-colors block py-2"
+              className="text-xs uppercase tracking-[0.2em] hover:text-brand-accent transition-colors block"
             >
               {link.name}
             </a>
           ))}
-          <div className="flex items-center space-x-4 pt-4 border-t border-brand-text/10">
-            <button onClick={() => { setLanguage('en'); setIsMobileMenuOpen(false); }} className={`text-sm uppercase tracking-widest ${language === 'en' ? 'text-brand-accent font-medium' : 'text-brand-text/60'}`}>EN</button>
-            <button onClick={() => { setLanguage('af'); setIsMobileMenuOpen(false); }} className={`text-sm uppercase tracking-widest ${language === 'af' ? 'text-brand-accent font-medium' : 'text-brand-text/60'}`}>AF</button>
+          <div className="flex items-center space-x-6 pt-6 border-t border-brand-text/10">
+            <button 
+              onClick={() => { setLanguage('en'); setIsMobileMenuOpen(false); }} 
+              className={`text-xs uppercase tracking-[0.2em] transition-colors ${language === 'en' ? 'text-brand-text border-b border-brand-accent' : 'text-brand-text/40 hover:text-brand-text'}`}
+            >
+              EN
+            </button>
+            <button 
+              onClick={() => { setLanguage('af'); setIsMobileMenuOpen(false); }} 
+              className={`text-xs uppercase tracking-[0.2em] transition-colors ${language === 'af' ? 'text-brand-text border-b border-brand-accent' : 'text-brand-text/40 hover:text-brand-text'}`}
+            >
+              AF
+            </button>
           </div>
         </div>
       )}

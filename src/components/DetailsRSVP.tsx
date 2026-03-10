@@ -14,89 +14,112 @@ export default function DetailsRSVP() {
   };
 
   return (
-    <section id="details" className="py-24 md:py-32 bg-brand-fill">
+    <section id="details" className="py-32 md:py-48 bg-brand-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           
           {/* Details Column */}
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="space-y-16"
+            transition={{ duration: 1 }}
+            className="lg:col-span-5 lg:col-start-2 space-y-24"
           >
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl text-brand-text mb-8 relative inline-block">
+              <h3 className="font-[Pinyon_Script] text-4xl md:text-5xl text-brand-accent mb-4">
+                Dress Code
+              </h3>
+              <h2 className="font-serif text-3xl md:text-4xl text-brand-text uppercase tracking-[0.15em] mb-8">
                 {t.attireTitle}
-                <span className="absolute -bottom-4 left-0 w-12 h-0.5 bg-brand-accent"></span>
               </h2>
-              <p className="text-brand-text/80 font-light mb-6 text-lg">{t.attireIntro}</p>
-              <ul className="space-y-4 text-brand-text/70 font-light list-disc pl-5">
+              <div className="w-12 h-[1px] bg-brand-accent mb-12"></div>
+              
+              <p className="text-brand-text/70 font-light mb-8 leading-[2] text-sm md:text-base tracking-wide">{t.attireIntro}</p>
+              <ul className="space-y-4 text-brand-text/70 font-light list-none">
                 {t.attireList.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index} className="flex items-start">
+                    <span className="text-brand-accent mr-4 mt-1">✦</span>
+                    <span className="leading-[2] text-sm md:text-base tracking-wide">{item}</span>
+                  </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl text-brand-text mb-8 relative inline-block">
+              <h3 className="font-[Pinyon_Script] text-4xl md:text-5xl text-brand-accent mb-4">
+                Menu
+              </h3>
+              <h2 className="font-serif text-3xl md:text-4xl text-brand-text uppercase tracking-[0.15em] mb-8">
                 {t.dietaryTitle}
-                <span className="absolute -bottom-4 left-0 w-12 h-0.5 bg-brand-accent"></span>
               </h2>
-              <p className="text-brand-text/80 font-light text-lg">{t.dietaryText}</p>
+              <div className="w-12 h-[1px] bg-brand-accent mb-12"></div>
+              <p className="text-brand-text/70 font-light leading-[2] text-sm md:text-base tracking-wide">{t.dietaryText}</p>
             </div>
           </motion.div>
 
           {/* RSVP Form Column */}
           <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="bg-brand-bg p-8 md:p-12 shadow-sm border border-brand-text/5"
+            transition={{ duration: 1, delay: 0.2 }}
+            className="lg:col-span-5"
           >
-            <h2 className="font-serif text-3xl md:text-4xl text-brand-text mb-8 relative inline-block">
-              {t.rsvpTitle}
-              <span className="absolute -bottom-4 left-0 w-12 h-0.5 bg-brand-accent"></span>
-            </h2>
-            <p className="text-brand-text/80 font-light mb-10 text-lg">{t.rsvpText}</p>
+            <div className="bg-brand-fill p-10 md:p-16">
+              <h3 className="font-[Pinyon_Script] text-4xl md:text-5xl text-brand-accent mb-4">
+                Join Us
+              </h3>
+              <h2 className="font-serif text-3xl md:text-4xl text-brand-text uppercase tracking-[0.15em] mb-8">
+                {t.rsvpTitle}
+              </h2>
+              <div className="w-12 h-[1px] bg-brand-accent mb-12"></div>
+              
+              <p className="text-brand-text/70 font-light mb-12 leading-[2] text-sm md:text-base tracking-wide">{t.rsvpText}</p>
 
-            {isSubmitted ? (
-              <div className="bg-brand-fill p-8 text-center border border-brand-accent/20">
-                <h3 className="font-serif text-2xl text-brand-accent mb-4">Thank You / Dankie</h3>
-                <p className="text-brand-text/80 font-light">
-                  {language === 'en' ? "Your RSVP has been received." : "U RSVP is ontvang."}
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm uppercase tracking-widest text-brand-text/70 mb-2">{t.form.name}</label>
-                  <input type="text" id="name" required className="w-full border-b border-brand-text/20 bg-transparent py-2 focus:outline-none focus:border-brand-accent transition-colors font-light" />
+              {isSubmitted ? (
+                <div className="text-center py-12 border border-brand-accent/20">
+                  <h3 className="font-[Pinyon_Script] text-4xl text-brand-accent mb-4">Thank You</h3>
+                  <p className="text-brand-text/70 font-light tracking-wide uppercase text-xs">
+                    {language === 'en' ? "Your RSVP has been received." : "U RSVP is ontvang."}
+                  </p>
                 </div>
-                <div>
-                  <label htmlFor="attending" className="block text-sm uppercase tracking-widest text-brand-text/70 mb-2">{t.form.attending}</label>
-                  <select id="attending" required className="w-full border-b border-brand-text/20 bg-transparent py-2 focus:outline-none focus:border-brand-accent transition-colors font-light text-brand-text">
-                    <option value="">Select / Kies</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="0">Regrets / Kan nie bywoon nie</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="dietary" className="block text-sm uppercase tracking-widest text-brand-text/70 mb-2">{t.form.dietary}</label>
-                  <input type="text" id="dietary" className="w-full border-b border-brand-text/20 bg-transparent py-2 focus:outline-none focus:border-brand-accent transition-colors font-light" />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm uppercase tracking-widest text-brand-text/70 mb-2">{t.form.message}</label>
-                  <textarea id="message" rows={3} className="w-full border-b border-brand-text/20 bg-transparent py-2 focus:outline-none focus:border-brand-accent transition-colors font-light resize-none"></textarea>
-                </div>
-                <button type="submit" className="w-full bg-brand-accent text-white hover:bg-brand-text transition-colors duration-300 py-4 uppercase tracking-widest text-sm mt-8">
-                  {t.form.submit}
-                </button>
-              </form>
-            )}
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-10">
+                  <div className="relative">
+                    <input type="text" id="name" required placeholder=" " className="peer w-full border-b border-brand-text/20 bg-transparent py-3 focus:outline-none focus:border-brand-accent transition-colors font-light text-brand-text placeholder-transparent" />
+                    <label htmlFor="name" className="absolute left-0 -top-3.5 text-xs uppercase tracking-[0.2em] text-brand-text/50 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-accent">{t.form.name}</label>
+                  </div>
+                  
+                  <div className="relative">
+                    <select id="attending" required className="peer w-full border-b border-brand-text/20 bg-transparent py-3 focus:outline-none focus:border-brand-accent transition-colors font-light text-brand-text appearance-none">
+                      <option value="" disabled selected hidden></option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="0">Regrets / Kan nie bywoon nie</option>
+                    </select>
+                    <label htmlFor="attending" className="absolute left-0 -top-3.5 text-xs uppercase tracking-[0.2em] text-brand-text/50 transition-all peer-focus:text-brand-accent">{t.form.attending}</label>
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-brand-accent">
+                      <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                  </div>
+                  
+                  <div className="relative">
+                    <input type="text" id="dietary" placeholder=" " className="peer w-full border-b border-brand-text/20 bg-transparent py-3 focus:outline-none focus:border-brand-accent transition-colors font-light text-brand-text placeholder-transparent" />
+                    <label htmlFor="dietary" className="absolute left-0 -top-3.5 text-xs uppercase tracking-[0.2em] text-brand-text/50 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-accent">{t.form.dietary}</label>
+                  </div>
+                  
+                  <div className="relative">
+                    <textarea id="message" rows={1} placeholder=" " className="peer w-full border-b border-brand-text/20 bg-transparent py-3 focus:outline-none focus:border-brand-accent transition-colors font-light text-brand-text placeholder-transparent resize-none"></textarea>
+                    <label htmlFor="message" className="absolute left-0 -top-3.5 text-xs uppercase tracking-[0.2em] text-brand-text/50 transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-xs peer-focus:text-brand-accent">{t.form.message}</label>
+                  </div>
+                  
+                  <button type="submit" className="w-full border border-brand-accent text-brand-text hover:bg-brand-accent hover:text-white transition-all duration-300 py-4 uppercase tracking-[0.2em] text-xs mt-12">
+                    {t.form.submit}
+                  </button>
+                </form>
+              )}
+            </div>
           </motion.div>
 
         </div>

@@ -8,19 +8,22 @@ export default function Registry() {
   const t = content[language].registry;
 
   return (
-    <section id="registry" className="py-24 md:py-32 bg-brand-bg text-center">
+    <section id="registry" className="py-32 md:py-48 bg-brand-fill text-center">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1 }}
         >
-          <h2 className="font-serif text-4xl md:text-5xl text-brand-text mb-12 relative inline-block">
+          <h3 className="font-[Pinyon_Script] text-4xl md:text-5xl text-brand-accent mb-4">
+            Gifts
+          </h3>
+          <h2 className="font-serif text-4xl md:text-6xl text-brand-text uppercase tracking-[0.15em] mb-8">
             {t.title}
-            <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-brand-accent"></span>
           </h2>
-          <p className="text-lg md:text-xl font-light text-brand-text/80 leading-relaxed">
+          <div className="w-px h-16 bg-brand-accent/50 mx-auto mb-16"></div>
+          <p className="text-sm md:text-base font-light text-brand-text/70 leading-[2] tracking-wide">
             {t.text}
           </p>
         </motion.div>

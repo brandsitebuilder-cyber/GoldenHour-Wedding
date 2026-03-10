@@ -8,60 +8,60 @@ export default function Invitation() {
   const t = content[language].invitation;
 
   return (
-    <section id="invitation" className="py-32 md:py-48 bg-brand-fill text-center relative overflow-hidden">
-      <div className="absolute inset-0 flex justify-center items-center opacity-5 pointer-events-none">
-        <span className="font-serif text-[40vw] text-brand-accent leading-none select-none">A&L</span>
+    <section id="invitation" className="py-32 md:py-48 bg-brand-bg text-center relative overflow-hidden">
+      <div className="absolute inset-0 flex justify-center items-center opacity-[0.03] pointer-events-none">
+        <span className="font-serif text-[40vw] text-brand-text leading-none select-none">A&L</span>
       </div>
       
       <motion.div 
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
       >
-        <p className="text-sm uppercase tracking-[0.2em] text-brand-text/60 mb-12">
+        <p className="text-xs md:text-sm uppercase tracking-[0.3em] text-brand-text/60 mb-16">
           {t.intro}
         </p>
         
-        <h2 className="font-serif text-4xl md:text-6xl text-brand-text mb-8 leading-tight">
+        <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl text-brand-text mb-12 uppercase tracking-[0.15em] leading-tight">
           {t.names.split('&').map((name, i) => (
             <React.Fragment key={name}>
               {name.trim()}
-              {i === 0 && <span className="block text-2xl md:text-4xl my-4 font-light italic text-brand-accent">&</span>}
+              {i === 0 && <span className="block text-3xl md:text-5xl my-6 font-[Pinyon_Script] text-brand-accent normal-case tracking-normal">&</span>}
             </React.Fragment>
           ))}
         </h2>
         
-        <p className="text-lg uppercase tracking-widest text-brand-text mb-16 font-medium">
+        <p className="text-sm md:text-base uppercase tracking-[0.3em] text-brand-text mb-20 font-light">
           {t.action}
         </p>
         
-        <div className="w-16 h-px bg-brand-accent mx-auto mb-16"></div>
+        <div className="w-px h-24 bg-brand-accent/50 mx-auto mb-20"></div>
         
-        <p className="text-lg md:text-xl font-light text-brand-text/80 mb-16 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl font-light text-brand-text/80 mb-20 leading-[2] max-w-2xl mx-auto">
           {t.message}
         </p>
         
-        <div className="space-y-4 mb-16">
-          <p className="text-lg uppercase tracking-widest font-medium text-brand-text">
+        <div className="space-y-6 mb-20">
+          <p className="text-sm md:text-base uppercase tracking-[0.3em] font-light text-brand-text">
             {t.datetime}
           </p>
-          <p className="text-md uppercase tracking-widest text-brand-text/70">
+          <p className="text-sm md:text-base uppercase tracking-[0.3em] font-light text-brand-text/70">
             {t.venue}
           </p>
-          <p className="text-md uppercase tracking-widest text-brand-text/70 pt-4">
+          <p className="text-sm md:text-base uppercase tracking-[0.3em] font-light text-brand-text/70 pt-4">
             {t.attire}
           </p>
         </div>
         
-        <p className="text-md font-light italic text-brand-text/80 mb-16">
+        <p className="text-2xl md:text-3xl font-[Pinyon_Script] text-brand-text/80 mb-20">
           {t.closing}
         </p>
         
         <a 
           href="#details" 
-          className="inline-block border border-brand-accent text-brand-text hover:bg-brand-accent hover:text-white transition-all duration-300 px-10 py-4 uppercase tracking-widest text-sm"
+          className="inline-block border border-brand-accent text-brand-text hover:bg-brand-accent hover:text-white transition-all duration-300 px-12 py-4 uppercase tracking-[0.2em] text-xs"
         >
           {language === 'en' ? 'Details & RSVP' : 'Besonderhede & RSVP'}
         </a>

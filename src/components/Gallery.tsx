@@ -16,39 +16,65 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-24 md:py-32 bg-brand-fill text-center">
+    <section id="gallery" className="py-32 md:py-48 bg-brand-bg text-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mb-16"
+          transition={{ duration: 1 }}
+          className="mb-24"
         >
-          <h2 className="font-serif text-4xl md:text-5xl text-brand-text mb-8 relative inline-block">
+          <h3 className="font-[Pinyon_Script] text-4xl md:text-5xl text-brand-accent mb-4">
+            Moments
+          </h3>
+          <h2 className="font-serif text-4xl md:text-6xl text-brand-text uppercase tracking-[0.15em] mb-8">
             {t}
-            <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-brand-accent"></span>
           </h2>
+          <div className="w-px h-16 bg-brand-accent/50 mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {galleryImages.map((src, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: i * 0.2 }}
-              className="aspect-[3/4] overflow-hidden shadow-md"
-            >
-              <img 
-                src={src} 
-                alt={`Gallery ${i + 1}`} 
-                className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
-                referrerPolicy="no-referrer"
-              />
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
+          {galleryImages.map((src, i) => {
+            // Create an asymmetrical layout
+            let colSpan = "md:col-span-6";
+            let marginTop = "";
+            let aspect = "aspect-[3/4]";
+            
+            if (i === 0) {
+              colSpan = "md:col-span-5 md:col-start-2";
+              aspect = "aspect-[4/5]";
+            } else if (i === 1) {
+              colSpan = "md:col-span-4 md:col-start-8";
+              marginTop = "md:mt-32";
+              aspect = "aspect-[3/4]";
+            } else if (i === 2) {
+              colSpan = "md:col-span-6 md:col-start-1";
+              aspect = "aspect-[16/9]";
+            } else if (i === 3) {
+              colSpan = "md:col-span-4 md:col-start-8";
+              marginTop = "md:-mt-32";
+              aspect = "aspect-[4/5]";
+            }
+
+            return (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: i * 0.2 }}
+                className={`${colSpan} ${marginTop} ${aspect} overflow-hidden`}
+              >
+                <img 
+                  src={src} 
+                  alt={`Gallery ${i + 1}`} 
+                  className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-1000 ease-out"
+                  referrerPolicy="no-referrer"
+                />
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

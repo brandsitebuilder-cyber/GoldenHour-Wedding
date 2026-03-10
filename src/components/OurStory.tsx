@@ -9,17 +9,17 @@ export default function OurStory() {
   const t = content[language].story;
 
   return (
-    <section id="story" className="py-24 md:py-32 bg-brand-bg">
+    <section id="story" className="py-32 md:py-48 bg-brand-fill">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
+            transition={{ duration: 1 }}
+            className="lg:col-span-5 lg:col-start-2 relative"
           >
-            <div className="aspect-[3/4] overflow-hidden rounded-sm shadow-xl">
+            <div className="aspect-[3/4] overflow-hidden">
               <img 
                 src={images.story} 
                 alt="Our Story" 
@@ -27,27 +27,30 @@ export default function OurStory() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-fill -z-10" />
-            <div className="absolute -top-6 -left-6 w-32 h-32 border border-brand-accent/30 -z-10" />
           </motion.div>
 
           <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
+            transition={{ duration: 1, delay: 0.2 }}
+            className="lg:col-span-5 space-y-12"
           >
-            <h2 className="font-serif text-4xl md:text-5xl text-brand-text mb-12 relative inline-block">
-              {t.title}
-              <span className="absolute -bottom-4 left-0 w-12 h-0.5 bg-brand-accent"></span>
-            </h2>
+            <div>
+              <h3 className="font-[Pinyon_Script] text-4xl md:text-5xl text-brand-accent mb-4">
+                The Beginning
+              </h3>
+              <h2 className="font-serif text-4xl md:text-6xl text-brand-text uppercase tracking-[0.15em] mb-8">
+                {t.title}
+              </h2>
+              <div className="w-12 h-[1px] bg-brand-accent mb-12"></div>
+            </div>
             
-            <div className="space-y-6 text-brand-text/80 leading-relaxed font-light text-lg">
+            <div className="space-y-8 text-brand-text/70 leading-[2] font-light text-sm md:text-base tracking-wide">
               <p>{t.p1}</p>
               <p>{t.p2}</p>
               <p>{t.p3}</p>
-              <p className="font-medium text-brand-text italic">{t.p4}</p>
+              <p className="font-serif italic text-brand-text text-lg">{t.p4}</p>
             </div>
           </motion.div>
         </div>
