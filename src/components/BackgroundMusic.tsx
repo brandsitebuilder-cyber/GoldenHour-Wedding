@@ -36,7 +36,7 @@ export default function BackgroundMusic() {
     <>
       <div className="hidden">
         <ReactPlayer
-          url="https://youtu.be/4Wxi4sVCeo0?list=RD4Wxi4sVCeo0"
+          src="https://youtu.be/4Wxi4sVCeo0?list=RD4Wxi4sVCeo0"
           playing={isPlaying}
           loop={true}
           volume={0.5}
@@ -50,7 +50,7 @@ export default function BackgroundMusic() {
                 showinfo: 0,
                 rel: 0,
               } as any
-            }
+            } as any
           }}
         />
       </div>

@@ -21,7 +21,7 @@ import MusicPlayer from './components/MusicPlayer';
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-brand-bg text-brand-text font-sans selection:bg-brand-accent/30">
+      <div className="min-h-screen bg-brand-bg text-brand-text font-sans selection:bg-brand-accent/30 overflow-x-hidden">
         <Navbar />
         <MusicPlayer />
         <main>
