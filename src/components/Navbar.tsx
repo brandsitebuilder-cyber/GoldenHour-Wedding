@@ -63,7 +63,7 @@ export default function Navbar() {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || location.pathname !== '/' ? 'bg-brand-bg shadow-sm py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="flex justify-between items-center">
-          <div className="flex-shrink-0 md:-ml-8 lg:-ml-16 xl:-ml-20">
+          <div className="flex-shrink-0">
             <Link 
               to="/" 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
