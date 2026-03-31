@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import { google } from "googleapis";
 import path from "path";
 
@@ -14,6 +15,11 @@ if (process.env.NODE_ENV !== "production") {
 const app = express();
 const PORT = 3000;
 
+app.use(cors({
+  origin: ["https://elsbruilof.co.za", "https://www.elsbruilof.co.za", "http://localhost:3000"],
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 app.use(express.json());
 
 // Health check route
