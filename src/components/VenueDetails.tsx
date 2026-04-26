@@ -59,7 +59,7 @@ export default function VenueDetails() {
           }}
         >
           <img
-            src="/images/fabian-centeno-MrCUUlmcoIA-unsplash.jpg"
+            src="/images/abraham-flores-RR6I1EZfKT4-unsplash.jpg"
             alt="Grand West Casino venue"
             style={{
               width: '100%',
