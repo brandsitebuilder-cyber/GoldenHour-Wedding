@@ -3,34 +3,34 @@ import { motion } from 'motion/react';
 
 const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=600&q=80',
+    src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80',
     className: '',
-    alt: 'Wedding rings',
+    alt: 'Wedding couple silhouette',
   },
   {
-    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80',
+    src: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&q=80',
     className: 'masonry-tall',
+    alt: 'Bride and groom',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&q=80',
+    className: '',
+    alt: 'First dance',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600&q=80',
+    className: 'masonry-wide',
     alt: 'Wedding bouquet',
   },
   {
-    src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80',
-    className: '',
-    alt: 'Couple walking',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=600&q=80',
-    className: 'masonry-wide',
-    alt: 'Golden hour couple',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1510076857177-7470076d4098?w=600&q=80',
+    src: 'https://images.unsplash.com/photo-1559666126-84f389727b9a?w=600&q=80',
     className: 'masonry-tall',
-    alt: 'Engagement shoot',
+    alt: 'Wedding venue arch',
   },
   {
-    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
+    src: 'https://picsum.photos/seed/golden-couple/600/800',
     className: '',
-    alt: 'Couple portrait',
+    alt: 'Golden hour couple',
   },
 ];
 

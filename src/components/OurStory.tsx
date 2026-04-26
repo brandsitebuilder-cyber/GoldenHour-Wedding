@@ -40,8 +40,8 @@ export default function OurStory() {
             }}
           >
             <img
-              src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80"
-              alt="Marcus & Sophie"
+            src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80"
+            alt="Marcus & Sophie in the field"
               style={{
                 width: '100%',
                 height: '100%',

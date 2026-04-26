@@ -25,8 +25,8 @@ export default function Hero() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1470071459604-7b8ec44ffd4a?w=1920&q=80"
-          alt="Golden hour landscape"
+          src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1920&q=80"
+          alt="Golden hour over the winelands"
           style={{
             width: '100%',
             height: '100%',

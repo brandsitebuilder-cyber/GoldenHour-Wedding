@@ -59,8 +59,8 @@ export default function VenueDetails() {
           }}
         >
           <img
-            src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&q=80"
-            alt="Grand West Casino"
+            src="https://picsum.photos/seed/grand-west-venue/1200/500"
+            alt="Grand West Casino venue"
             style={{
               width: '100%',
               height: '100%',
