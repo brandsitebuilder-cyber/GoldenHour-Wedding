@@ -1,28 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-brand-bg: #FAFAF8;
-  --color-brand-text: #1C1C1C;
-  --color-brand-accent: #C9A84C;
-  --color-brand-fill: #F0EFEB;
-  --color-brand-secondary: #2D2D2D;
-  --color-brand-tertiary: #8B8B7A;
-  --font-serif: "Cormorant Garamond", serif;
-  --font-sans: "Inter", sans-serif;
+  --color-gold: #D4AF37;
+  --color-warm-gray: #f5f5f7;
+  --color-dark: #000000;
+  --color-soft-white: #ffffff;
+  --font-heading: "Playfair Display", serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
-body {
-  font-family: var(--font-sans);
-  color: var(--color-brand-text);
-  background-color: var(--color-brand-bg);
+html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, .font-serif {
-  font-family: var(--font-serif);
+body {
+  font-family: var(--font-body);
+  background-color: #ffffff;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Apple-style section transitions */
+.section-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.section-light {
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 0.875rem 2.5rem;
+  border: 1px solid #D4AF37;
+  color: #ffffff;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #D4AF37;
+  color: #000000;
+}
+
+/* Gold accent underline */
+.gold-accent {
+  width: 2.5rem;
+  height: 1px;
+  background-color: #D4AF37;
+}
+
+/* Masonry grid */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .masonry-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.masonry-item {
+  overflow: hidden;
+  position: relative;
+}
+
+.masonry-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.masonry-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Tall / wide masonry variants */
+.masonry-tall {
+  grid-row: span 2;
+}
+
+.masonry-wide {
+  grid-column: span 2;
+}
+
+/* Timeline cards */
+.timeline-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.timeline-time {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: #D4AF37;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-event {
+  font-size: 0.875rem;
+  color: #6e6e73;
+  letter-spacing: 0.05em;
+}
+
+/* Form fields */
+.form-field {
+  width: 100%;
+  padding: 0.875rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #d2d2d7;
+  font-size: 0.9375rem;
+  color: #1d1d1f;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-field:focus {
+  border-bottom-color: #D4AF37;
+}
+
+.form-field::placeholder {
+  color: #86868b;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d2d2d7;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a6;
 }

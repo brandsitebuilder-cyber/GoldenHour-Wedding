@@ -1,60 +1,118 @@
 import React from 'react';
-import { useLanguage } from '../LanguageContext';
-import { content } from '../content';
-import { images } from '../assets';
 import { motion } from 'motion/react';
 
 export default function OurStory() {
-  const { language } = useLanguage();
-  const t = content[language].story;
-
   return (
-    <section id="story" className="py-32 md:py-48 bg-brand-fill">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="lg:col-span-6 relative"
+    <section
+      id="story"
+      className="section-light"
+      style={{
+        paddingTop: 'clamp(4rem, 10vw, 8rem)',
+        paddingBottom: 'clamp(4rem, 10vw, 8rem)',
+        paddingLeft: 'clamp(1.5rem, 5vw, 3rem)',
+        paddingRight: 'clamp(1.5rem, 5vw, 3rem)',
+      }}
+    >
+      <div
+        style={{
+          maxWidth: 1100,
+          margin: '0 auto',
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gap: 'clamp(2rem, 5vw, 4rem)',
+          alignItems: 'center',
+        }}
+        className="md-story-grid"
+      >
+        {/* Image */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9 }}
+        >
+          <div
+            style={{
+              overflow: 'hidden',
+              borderRadius: 12,
+              aspectRatio: '4 / 5',
+              maxHeight: 600,
+            }}
           >
-            <div className="aspect-[3/4] overflow-hidden">
-              <img 
-                src={images.story} 
-                alt="Our Story" 
-                className="w-full h-full object-cover object-center"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-          </motion.div>
+            <img
+              src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80"
+              alt="Marcus & Sophie"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          </div>
+        </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="lg:col-span-6 space-y-12 flex flex-col items-center"
+        {/* Text */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, delay: 0.15 }}
+          style={{ maxWidth: 480 }}
+        >
+          <h2
+            style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: 'clamp(1.75rem, 4vw, 2.75rem)',
+              fontWeight: 500,
+              color: '#1d1d1f',
+              marginBottom: '0.5rem',
+            }}
           >
-            <div className="text-center">
-              <h3 className="font-[Pinyon_Script] text-4xl md:text-5xl text-brand-accent mb-4">
-                {t.subtitle}
-              </h3>
-              <h2 className="font-serif text-4xl md:text-6xl text-brand-text uppercase tracking-[0.15em] mb-8">
-                {t.title}
-              </h2>
-              <div className="w-12 h-[1px] bg-brand-accent mx-auto mb-12"></div>
-            </div>
-            
-            <div className="space-y-8 text-brand-text/70 leading-[2] font-light text-sm md:text-base tracking-wide text-justify [text-align-last:center]">
-              <p>{t.p1}</p>
-              <p>{t.p2}</p>
-              <p>{t.p3}</p>
-              <p className="font-serif italic text-brand-text text-lg text-center">{t.p4}</p>
-            </div>
-          </motion.div>
-        </div>
+            Our Story
+          </h2>
+          <div className="gold-accent" style={{ marginBottom: '2rem' }} />
+
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '1.25rem',
+              color: '#6e6e73',
+              fontSize: '0.9375rem',
+              lineHeight: 1.7,
+              fontWeight: 400,
+            }}
+          >
+            <p>
+              It began with golden light. Marcus arrived late to a sunset photography
+              workshop at Signal Hill, his camera bag half-open, tripod bumping against
+              his leg. Sophie was already there, adjusting her lens toward the
+              Atlantic — the only person in the group who noticed the shot everyone
+              else missed.
+            </p>
+            <p>
+              They didn't exchange numbers that evening. But the next weekend, at
+              another workshop in the Winelands, there she was again — this time
+              capturing the last rays through the vines. He asked to see her photos.
+              She showed him one of a couple dancing in the distance, blurred by
+              motion. "That's the feeling I want to remember," she said. He agreed.
+            </p>
+            <p>
+              Three years, countless golden hours, and one sunrise proposal at
+              Chapman's Peak later, they're ready for the next chapter — together,
+              in front of the lens, finally.
+            </p>
+          </div>
+        </motion.div>
       </div>
+
+      <style>{`
+        @media (min-width: 768px) {
+          .md-story-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+      `}</style>
     </section>
   );
 }
