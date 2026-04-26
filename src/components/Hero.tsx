@@ -25,7 +25,7 @@ export default function Hero() {
         }}
       >
         <img
-          src="/images/adrian-ordonez-6qT5wWDrN_I-unsplash.jpg"
+          src="/images/travis-lee-gilbert-Xwvd6SdaGFA-unsplash.jpg"
           alt="Golden hour over the winelands"
           style={{
             width: '100%',

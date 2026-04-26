@@ -3,32 +3,32 @@ import { motion } from 'motion/react';
 
 const galleryImages = [
   {
-    src: '/images/taylor-flowe-soA1gQYsCgM-unsplash.jpg',
+    src: '/images/roquelle-Z8GElxZdJ9g-unsplash.jpg',
     className: '',
     alt: 'Engagement couple portrait',
   },
   {
-    src: '/images/nathan-dumlao-7c5S2cwBvnU-unsplash.jpg',
+    src: '/images/travis-lee-gilbert-XmmanvB1Y_4-unsplash.jpg',
     className: 'masonry-tall',
     alt: 'Romantic engagement moment',
   },
   {
-    src: '/images/melissa-mjoen-7EmyHUnlK_o-unsplash.jpg',
+    src: '/images/karina-jauregui-UKdviKhNc_M-unsplash.jpg',
     className: '',
     alt: 'Happy couple',
   },
   {
-    src: '/images/gladys-aguayo-R1gJvAyn4JQ-unsplash.jpg',
+    src: '/images/travis-lee-gilbert-SOKgyMj7dJo-unsplash.jpg',
     className: 'masonry-wide',
     alt: 'Engagement kiss',
   },
   {
-    src: '/images/seth-reese-GJ92T3mRTEY-unsplash.jpg',
+    src: '/images/ryan-jacobson-N7S-Y9Yc1vA-unsplash.jpg',
     className: 'masonry-tall',
     alt: 'Couple embracing',
   },
   {
-    src: '/images/asdrubal-luna-m3WBskzsZ1o-unsplash.jpg',
+    src: '/images/nathan-dumlao-9UDwXxaPxZc-unsplash.jpg',
     className: '',
     alt: 'Engagement celebration',
   },
