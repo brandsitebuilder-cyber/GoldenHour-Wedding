@@ -115,7 +115,7 @@ export default function Schedule() {
                 <div
                   style={{
                     fontSize: '0.8125rem',
-                    color: '#6e6e73',
+                    color: '#4a4a4e',
                     fontWeight: 400,
                   }}
                 >

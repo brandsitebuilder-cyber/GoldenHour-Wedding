@@ -131,7 +131,7 @@ export default function VenueDetails() {
             </h3>
             <p
               style={{
-                color: 'rgba(255,255,255,0.6)',
+                color: 'rgba(255,255,255,0.75)',
                 fontSize: '0.9375rem',
                 lineHeight: 1.7,
               }}
@@ -177,7 +177,7 @@ export default function VenueDetails() {
             </div>
             <p
               style={{
-                color: 'rgba(255,255,255,0.6)',
+                color: 'rgba(255,255,255,0.75)',
                 fontSize: '0.875rem',
                 lineHeight: 1.7,
               }}

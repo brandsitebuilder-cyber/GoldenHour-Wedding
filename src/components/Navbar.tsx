@@ -43,7 +43,7 @@ export default function Navbar() {
     zIndex: 50,
     height: 48,
     transition: 'all 0.3s ease',
-    backgroundColor: isScrolled ? 'rgba(0,0,0,0.8)' : 'rgba(0,0,0,0.3)',
+    backgroundColor: isScrolled ? 'rgba(0,0,0,0.85)' : 'rgba(0,0,0,0.6)',
     backdropFilter: 'blur(20px)',
     WebkitBackdropFilter: 'blur(20px)',
     borderBottom: isScrolled ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent',

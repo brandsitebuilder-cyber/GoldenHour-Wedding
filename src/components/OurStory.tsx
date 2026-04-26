@@ -77,7 +77,7 @@ export default function OurStory() {
               display: 'flex',
               flexDirection: 'column',
               gap: '1.25rem',
-              color: '#6e6e73',
+              color: '#4a4a4e',
               fontSize: '0.9375rem',
               lineHeight: 1.7,
               fontWeight: 400,
