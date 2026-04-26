@@ -69,7 +69,7 @@ export default function Navbar() {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="font-serif text-2xl tracking-widest text-brand-text whitespace-nowrap"
             >
-              A & L
+              O & M
             </Link>
           </div>
           
@@ -84,20 +84,6 @@ export default function Navbar() {
                 {link.name}
               </button>
             ))}
-            <div className="flex items-center space-x-2 lg:space-x-3 text-[10px] lg:text-xs uppercase tracking-[0.1em] xl:tracking-[0.2em] pl-2 lg:pl-4 xl:pl-6">
-              <button 
-                onClick={() => setLanguage('en')} 
-                className={`transition-colors ${language === 'en' ? 'text-brand-text border-b border-brand-accent' : 'text-brand-text/40 hover:text-brand-text'}`}
-              >
-                EN
-              </button>
-              <button 
-                onClick={() => setLanguage('af')} 
-                className={`transition-colors ${language === 'af' ? 'text-brand-text border-b border-brand-accent' : 'text-brand-text/40 hover:text-brand-text'}`}
-              >
-                AF
-              </button>
-            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -121,20 +107,6 @@ export default function Navbar() {
               {link.name}
             </button>
           ))}
-          <div className="flex items-center space-x-6 pt-6 border-t border-brand-text/10">
-            <button 
-              onClick={() => { setLanguage('en'); setIsMobileMenuOpen(false); }} 
-              className={`text-xs uppercase tracking-[0.2em] transition-colors ${language === 'en' ? 'text-brand-text border-b border-brand-accent' : 'text-brand-text/40 hover:text-brand-text'}`}
-            >
-              EN
-            </button>
-            <button 
-              onClick={() => { setLanguage('af'); setIsMobileMenuOpen(false); }} 
-              className={`text-xs uppercase tracking-[0.2em] transition-colors ${language === 'af' ? 'text-brand-text border-b border-brand-accent' : 'text-brand-text/40 hover:text-brand-text'}`}
-            >
-              AF
-            </button>
-          </div>
         </div>
       )}
     </nav>

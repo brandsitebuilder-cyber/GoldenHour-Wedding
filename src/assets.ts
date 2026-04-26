@@ -1,9 +1,8 @@
 export const images = {
-  hero: "https://drive.google.com/thumbnail?id=1CrpQWmMiwN3NgKL-c7k3YJZUb2Z2b0yA&sz=w2000",
-  story: "https://drive.google.com/thumbnail?id=19VyjZrFX5zsU6zZW35yQYYfGM9gJ1VJl&sz=w2000",
-  gallery1: "https://drive.google.com/thumbnail?id=1Saioi_tS8IgmOyEHJ4KZSOjYXH24-gk4&sz=w2000",
-  gallery2: "https://drive.google.com/thumbnail?id=19VyjZrFX5zsU6zZW35yQYYfGM9gJ1VJl&sz=w2000",
-  gallery3: "https://drive.google.com/thumbnail?id=1oqselphDCZlmyL0H7WRDhMs_bJXj_4gW&sz=w2000",
-  gallery4: "https://drive.google.com/thumbnail?id=1U84HDFdvwBkAIxO5gVVi-mBSzA8RbzyA&sz=w2000",
+  hero: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1920",
+  story: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1920",
+  gallery1: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=1920",
+  gallery2: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1920",
+  gallery3: "https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=1920",
+  gallery4: "https://images.unsplash.com/photo-1510076857177-7470076d4098?w=1920",
 };
-
