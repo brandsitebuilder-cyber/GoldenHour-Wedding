@@ -3,34 +3,34 @@ import { motion } from 'motion/react';
 
 const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80',
+    src: '/images/roquelle-Z8GElxZdJ9g-unsplash.jpg',
     className: '',
-    alt: 'Wedding couple silhouette',
+    alt: 'Engagement couple portrait',
   },
   {
-    src: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&q=80',
+    src: '/images/travis-lee-gilbert-XmmanvB1Y_4-unsplash.jpg',
     className: 'masonry-tall',
-    alt: 'Bride and groom',
+    alt: 'Romantic engagement moment',
   },
   {
-    src: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&q=80',
+    src: '/images/karina-jauregui-UKdviKhNc_M-unsplash.jpg',
     className: '',
-    alt: 'First dance',
+    alt: 'Happy couple',
   },
   {
-    src: 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600&q=80',
+    src: '/images/travis-lee-gilbert-SOKgyMj7dJo-unsplash.jpg',
     className: 'masonry-wide',
-    alt: 'Wedding bouquet',
+    alt: 'Engagement kiss',
   },
   {
-    src: 'https://images.unsplash.com/photo-1559666126-84f389727b9a?w=600&q=80',
+    src: '/images/ryan-jacobson-N7S-Y9Yc1vA-unsplash.jpg',
     className: 'masonry-tall',
-    alt: 'Wedding venue arch',
+    alt: 'Couple embracing',
   },
   {
-    src: 'https://picsum.photos/seed/golden-couple/600/800',
+    src: '/images/nathan-dumlao-9UDwXxaPxZc-unsplash.jpg',
     className: '',
-    alt: 'Golden hour couple',
+    alt: 'Engagement celebration',
   },
 ];
 
@@ -84,7 +84,7 @@ export default function Gallery() {
               letterSpacing: '0.05em',
             }}
           >
-            A collection of moments captured in golden light
+            Our engagement story in pictures
           </p>
         </motion.div>
 

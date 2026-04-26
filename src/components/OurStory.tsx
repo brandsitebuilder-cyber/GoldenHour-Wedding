@@ -40,7 +40,7 @@ export default function OurStory() {
             }}
           >
             <img
-            src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&q=80"
+            src="/images/nathan-dumlao-_-prYEEf0v4-unsplash.jpg"
             alt="Marcus & Sophie in the field"
               style={{
                 width: '100%',
